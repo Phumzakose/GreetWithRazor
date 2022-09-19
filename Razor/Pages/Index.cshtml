@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Greetings App</h1>
+    
+<div class="name">
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="firstname">
+      @* <span asp-validation-for="Greet!.FirstName" class="text-danger"></span> *@
+    <label asp-for="Greet!.FirstName">Name:</label>
+    <input asp-for="Greet!.FirstName" /><br>
+    </div>
+    <div class="radio">
+@* <span asp-validation-for="Greet!.Language" class="text-danger"></span> *@
+<input asp-for="Greet!.Language"type="radio" value="isixhosa" id="Language" />IsiXhosa
+<input asp-for="Greet!.Language" type="radio" value="setswana" id="Language"  />Setswana
+<input asp-for="Greet!.Language" type="radio" value="isizulu" id="Language" />IsiZulu<br>
+   
+
+<div class="counter">
+    counter:
+    @if (Model.Greet!= null)
+    {
+      @Model.count
+    }
+</div>
+    <button asp-action="Greet" class="btn" type="submit">Greet</button>
+    <button asp-action ="clear" class="btn" type="clear">Clear</button>
+
+   </div> 
+</form>
+
+
+</div>
+
+
+
+
+<div class="greeting">
+    @if(Model.Greet!= null && Model.Greet.FirstName != null)
+    {
+    @Model.Greeting
+    }
+   
+</div>
+@* <div class="list">
+    @if (Model.Greet != null)
+  {
+    @foreach (KeyValuePair<string, int> kv in @Model.List)
+    {
+      //Console.WriteLine(kv.Key + ":" + kv.Value);
+    <p>
+        @kv.Key: @kv.Value
+    </p>
+    }
+  }
+</div> *@
+<hr>
+   
+
+</div>
+
+
+
+

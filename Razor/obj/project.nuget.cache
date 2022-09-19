@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "kuDbjyl45MHRssAdRK4ob2XVW1ooUggRZpGMvVOxj3CJuPmxWhJPNYpLMLoyjVM7Kc6w7yD9QOtaKg9mEu/DTg==",
+  "success": true,
+  "projectFilePath": "/home/codex/c#projects/GreetingsWithRazor/Razor/GreetWithRazor.csproj",
+  "expectedPackageFiles": [
+    "/home/codex/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
+    "/home/codex/.nuget/packages/npgsql/6.0.6/npgsql.6.0.6.nupkg.sha512",
+    "/home/codex/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

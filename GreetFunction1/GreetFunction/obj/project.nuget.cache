@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "NleO8SD0zMXC0A4FG2UQ+aRA5s3ZiTzPCyNqz1Ud4e89N/XSLZbDzSZGUGYNl87dc7ytaeJZnrkaJ5kog5EpZA==",
+  "success": true,
+  "projectFilePath": "/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction/GreetFunction.csproj",
+  "expectedPackageFiles": [
+    "/home/codex/.nuget/packages/dapper/2.0.123/dapper.2.0.123.nupkg.sha512",
+    "/home/codex/.nuget/packages/npgsql/6.0.6/npgsql.6.0.6.nupkg.sha512",
+    "/home/codex/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

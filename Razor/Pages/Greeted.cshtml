@@ -1,0 +1,38 @@
+﻿@page
+@model GreetWithRazor.Pages.GreetedModel
+@{
+  ViewData["Title"] = "Greeted page";
+}
+<div class="text-center">
+    <h2 class="display-4">Greeted People</h2>
+
+  <div class="list">
+    @if (Model.List != null)
+  {
+    <table class="table table-striped table-bordered">
+      <tr>
+<th>FirstName</th> 
+<th>Greeted Times</th> 
+</tr>
+    @foreach (KeyValuePair<string, int> kv in @Model.List)
+    {
+      <tr>
+        <td>@kv.Key</td>
+        <td>@kv.Value</td>
+      </tr>
+    }
+    </table>
+  }
+
+</div>
+<div class="remove">
+<form method="post">
+  <label asp-for="Greet.FirstName">RemoveName:</label>
+ <input asp-for="Greet.FirstName" />
+<button asp-action="remove" type="remove" class="btn1">Remove</button>
+
+ @* <button asp-action="remove" class="btn1" type="remove">Remove</button> *@
+</form>
+
+</div>
+</div>

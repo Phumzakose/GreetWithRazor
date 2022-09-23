@@ -85,3 +85,14 @@ h3 {
 .validation {
   margin-bottom: 20px;
 }
+.button button {
+  margin-right: 50px;
+  width: 150px;
+  margin-left: auto;
+}
+.button {
+  margin-left: 100px;
+}
+.firstname input {
+  text-align: center;
+}

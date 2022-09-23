@@ -28,11 +28,11 @@ public class IndexModel : PageModel
   public string? Greeting { get; set; }
   public int count
   {
-    // get
-    // {
-    //   return _greetings.Counter();
-    // }
-    get; set;
+    get
+    {
+      return _greetings.Counter();
+    }
+    // get; set;
   }
 
   public Dictionary<string, int> List { get; set; }
@@ -58,17 +58,18 @@ public class IndexModel : PageModel
         _greetings.AddUsers(Greet.FirstName, 1);
         Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
         List = _greetings.GetList();
-        count = _greetings.Counter();
+        _greetings.Counter();
         Greet.FirstName = "";
         Greet.Language = "";
         ModelState.Clear();
       }
+
     }
 
   }
-  public IActionResult OnPostClear()
+  public IActionResult OnPostGreetedPeople()
   {
-    if (Handler == "clear")
+    if (Handler == "greetedPeople")
     {
       //clear = _greetings.Clear();
       List = _greetings.GetList();

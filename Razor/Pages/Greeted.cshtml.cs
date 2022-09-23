@@ -45,7 +45,7 @@ public class GreetedModel : PageModel
   {
 
     List = _greetings.GetList();
-    Message = _greetings.Message();
+    //Message = _greetings.Message();
 
 
   }

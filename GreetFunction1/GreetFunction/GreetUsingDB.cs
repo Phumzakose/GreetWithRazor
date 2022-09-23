@@ -43,6 +43,33 @@ public class GreetUsingDataBase : IGreet
     }
     return "";
   }
+  public string GreetFriends(string[] command)
+  {
+    if (command[0] == "greet" && command.Length == 3)
+    {
+      if (command[2] == "setswana" && command[0] == "greet")
+      {
+        return "Dumelang, le kae? " + command[1];
+      }
+      else if (command[2] == "isixhosa" && command[0] == "greet")
+      {
+        return "Molo, " + command[1];
+      }
+      else if (command[2] == "isizulu" && command[0] == "greet")
+      {
+        return "Sawubona, " + command[1];
+      }
+      else
+      {
+        return command[2] + " is not recognised";
+      }
+    }
+    else if (command[0] == "greet" && command.Length == 2)
+    {
+      return "Hello, " + command[1];
+    }
+    return "";
+  }
   public void AddUsers(string userName, int counter)
   {
 

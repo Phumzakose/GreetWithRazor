@@ -30,9 +30,7 @@
             </div>
 
             }
-            @* <input asp-for="Greet!.Language"type="radio" value="isixhosa" id="Language" />IsiXhosa
-            <input asp-for="Greet!.Language" type="radio" value="setswana" id="Language"  />Setswana
-    <       input asp-for="Greet!.Language" type="radio" value="isizulu" id="Language" />IsiZulu<br> *@
+        
               <div class="form-check form-check-inline">
             <input  asp-for="Greet!.Language" class="form-check-input" type="radio" id="flexchecked" value="isixhosa">
             <label class="form-check-label" for="Greet!.Language">IsiXhosa</label>
@@ -47,14 +45,12 @@
             </div>
         </div> 
         <div class="counter">
-          
             counter: @Model.count
- 
         </div>
-                @* <div class="d-grid gap-2"> *@
+                <div class="button">
                 <button asp-page-handler="Greet" class="btn btn-primary btn-lg" type="submit" >Greet</button>
-                <button asp-page-handler="clear" class="btn btn-danger btn-lg" type="clear">Greeted</button>
-                @* </div> *@
+                <button asp-page-handler="greetedPeople" class="btn btn-danger btn-lg" type="greetedPeople">Greeted</button>
+                </div>
 
         </form>
     </div>

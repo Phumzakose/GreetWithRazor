@@ -62,7 +62,7 @@ body {
   font-size: 15px;
   color: white;
 }
-.list {
+.table {
   margin-top: 50px;
 }
 .firstname {
@@ -81,4 +81,7 @@ h3 {
 }
 .go {
   margin-top: 70px;
+}
+.validation {
+  margin-bottom: 20px;
 }

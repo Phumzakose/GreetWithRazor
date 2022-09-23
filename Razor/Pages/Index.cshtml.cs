@@ -28,10 +28,11 @@ public class IndexModel : PageModel
   public string? Greeting { get; set; }
   public int count
   {
-    get
-    {
-      return _greetings.Counter();
-    }
+    // get
+    // {
+    //   return _greetings.Counter();
+    // }
+    get; set;
   }
 
   public Dictionary<string, int> List { get; set; }
@@ -47,27 +48,17 @@ public class IndexModel : PageModel
   public string Handler { get; set; }
 
 
-  static string pattern = @"^[a-zA-Z]*$";
-  Regex reg = new Regex(pattern);
-
   public void OnPostGreet()
   {
     if (Handler == "Greet")
     {
-      if (Greet.FirstName != null && Greet.Language != null)
+      if (ModelState.IsValid)
       {
-        if (reg.IsMatch(Greet.FirstName))
-        {
-          _greetings.AddUsers(Greet.FirstName, 1);
-          Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
 
-        }
-        else
-        {
-          Greeting = "Your name is invalid";
-
-        }
+        _greetings.AddUsers(Greet.FirstName, 1);
+        Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
         List = _greetings.GetList();
+        count = _greetings.Counter();
         Greet.FirstName = "";
         Greet.Language = "";
         ModelState.Clear();
@@ -89,33 +80,5 @@ public class IndexModel : PageModel
 
   }
 
-  // public IActionResult OnPost()
-  // {
-  //   if (Action == "Greet")
-  //   {
-  //     if (ModelState.IsValid)
-  //     {
-  //       _greetings.AddUsers(Greet.FirstName, 1);
-  //       List = _greetings.GetList();
-  //       Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
-  //       Greet.FirstName = "";
-  //       Greet.Language = "";
-  //       ModelState.Clear();
-
-  //     }
-
-  //   }
-  //   else if (Action == "clear")
-  //   {
-  //     if (Greet.FirstName == null && Greet.Language == null)
-  //     {
-
-  //       clear = _greetings.Clear();
-  //     }
-
-  //   }
-  //   return Page();
-
-  // }
 
 }

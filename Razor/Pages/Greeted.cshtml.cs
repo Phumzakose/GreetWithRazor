@@ -28,10 +28,12 @@ public class GreetedModel : PageModel
   }
   public string Message
   {
-    get
-    {
-      return _greetings.Message();
-    }
+    // get
+    // {
+    //   return _greetings.Message();
+    // }
+    get;
+    set;
   }
   [BindProperty]
   public Greeter Greet { get; set; }
@@ -39,13 +41,11 @@ public class GreetedModel : PageModel
   [BindProperty]
   public string Handler { get; set; }
 
-
-
   public void OnGet()
   {
 
     List = _greetings.GetList();
-    // Message = _greetings.Message();
+    Message = _greetings.Message();
 
 
   }
@@ -66,6 +66,7 @@ public class GreetedModel : PageModel
     {
       _greetings.Clear();
       List = _greetings.GetList();
+      Message = _greetings.Message();
 
 
     }

@@ -15,6 +15,8 @@ public class GreetUsingDataBase : IGreet
   }
   public string Greetings(string firstName, string language)
   {
+    firstName = char.ToUpper(firstName[0]) + firstName.Substring(1);
+
     if (firstName != null && language != null)
     {
       if (language == "setswana")
@@ -33,6 +35,7 @@ public class GreetUsingDataBase : IGreet
       {
         return language + " is not recognised";
       }
+
     }
     else if (language == "")
     {
@@ -42,9 +45,12 @@ public class GreetUsingDataBase : IGreet
   }
   public void AddUsers(string userName, int counter)
   {
+
     using var connection = new NpgsqlConnection(connectionString);
     connection.Open();
+
     var parameters = new { UserName = userName };
+
     var sql = @"select count (*) from people where firstname = @UserName;";
     var result = connection.QueryFirst(sql, parameters);
     if (result.count == 1)
@@ -66,6 +72,8 @@ public class GreetUsingDataBase : IGreet
   });
       connection.Close();
     }
+
+
 
   }
   public Dictionary<string, int> GetList()
@@ -158,5 +166,9 @@ public class GreetUsingDataBase : IGreet
     Console.WriteLine(">To remove someone in the list enter clear and the name");
     Console.WriteLine(">To delete all the people you have greeted enter clear");
     Console.WriteLine(">To exit the application enter exit");
+  }
+  public string Message()
+  {
+    return "Your list is cleared!";
   }
 }

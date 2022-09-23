@@ -1,13 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using GreetFunction;
+using System.Text.RegularExpressions;
 
 namespace GreetWithRazor.Pages;
 
 public class IndexModel : PageModel
 {
   //IGreet user = new GreetUsingDataBase();
-  public IGreet _greetings { get; set; }
+  private IGreet _greetings;
+
 
   private readonly ILogger<IndexModel> _logger;
 
@@ -18,15 +20,20 @@ public class IndexModel : PageModel
   }
 
 
+
   public void OnGet()
   {
 
-    // return Page();
-
+  }
+  public string? Greeting { get; set; }
+  public int count
+  {
+    get
+    {
+      return _greetings.Counter();
+    }
   }
 
-  public string? Greeting { get; set; }
-  public int count { get; set; }
   public Dictionary<string, int> List { get; set; }
 
   public string clear { get; set; }
@@ -37,44 +44,78 @@ public class IndexModel : PageModel
   [BindProperty]
   public Greeter Greet { get; set; }
   [BindProperty]
-  public string Action { get; set; }
+  public string Handler { get; set; }
 
 
+  static string pattern = @"^[a-zA-Z]*$";
+  Regex reg = new Regex(pattern);
 
-  public IActionResult OnPost()
+  public void OnPostGreet()
   {
-    if (Action == "Greet")
+    if (Handler == "Greet")
     {
-      if (ModelState.IsValid)
+      if (Greet.FirstName != null && Greet.Language != null)
       {
-        _greetings.AddUsers(Greet.FirstName, 1);
-        count = _greetings.Counter();
+        if (reg.IsMatch(Greet.FirstName))
+        {
+          _greetings.AddUsers(Greet.FirstName, 1);
+          Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
+
+        }
+        else
+        {
+          Greeting = "Your name is invalid";
+
+        }
         List = _greetings.GetList();
-        Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
         Greet.FirstName = "";
         Greet.Language = "";
         ModelState.Clear();
-
       }
-
-
     }
-    else if (Action == "clear")
-    {
-      if (Greet.FirstName == null && Greet.Language == null)
-      {
-
-        clear = _greetings.Clear();
-      }
-
-    }
-    else if (Action == "remove")
-    {
-      _greetings.Remove(Greet.FirstName);
-      Console.WriteLine(_greetings.Remove(Greet.FirstName));
-
-    }
-    return Page();
 
   }
+  public IActionResult OnPostClear()
+  {
+    if (Handler == "clear")
+    {
+      //clear = _greetings.Clear();
+      List = _greetings.GetList();
+
+
+    }
+    return Redirect("/Greeted");
+
+
+  }
+
+  // public IActionResult OnPost()
+  // {
+  //   if (Action == "Greet")
+  //   {
+  //     if (ModelState.IsValid)
+  //     {
+  //       _greetings.AddUsers(Greet.FirstName, 1);
+  //       List = _greetings.GetList();
+  //       Greeting = _greetings.Greetings(Greet.FirstName, Greet.Language);
+  //       Greet.FirstName = "";
+  //       Greet.Language = "";
+  //       ModelState.Clear();
+
+  //     }
+
+  //   }
+  //   else if (Action == "clear")
+  //   {
+  //     if (Greet.FirstName == null && Greet.Language == null)
+  //     {
+
+  //       clear = _greetings.Clear();
+  //     }
+
+  //   }
+  //   return Page();
+
+  // }
+
 }

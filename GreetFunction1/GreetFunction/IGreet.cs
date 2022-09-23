@@ -9,4 +9,5 @@ public interface IGreet
   string Clear();
   string Remove(string userName);
   void Help();
+  string Message();
 }

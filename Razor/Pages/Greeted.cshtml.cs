@@ -8,7 +8,7 @@ namespace GreetWithRazor.Pages;
 public class GreetedModel : PageModel
 {
 
-  public IGreet _greetings;
+  private IGreet _greetings;
   private readonly ILogger<IndexModel> _logger;
 
   public GreetedModel(ILogger<IndexModel> logger, IGreet GreetUsingDatabase)
@@ -26,34 +26,52 @@ public class GreetedModel : PageModel
     set;
 
   }
+  public string Message
+  {
+    get
+    {
+      return _greetings.Message();
+    }
+  }
   [BindProperty]
   public Greeter Greet { get; set; }
+
   [BindProperty]
-  public string Action { get; set; }
+  public string Handler { get; set; }
+
 
 
   public void OnGet()
   {
 
     List = _greetings.GetList();
+    // Message = _greetings.Message();
 
 
   }
-  public IActionResult OnPost()
+  public void OnPostRemove(string name)
   {
-    if (Action == "remove")
-    {
-      foreach (KeyValuePair<string, int> kv in _greetings.GetList())
-      {
-        _greetings.Remove(Greet.FirstName);
-        Greet.FirstName = "";
-        ModelState.Clear();
 
-      }
+    _greetings.Remove(Greet.FirstName);
+    Greet.FirstName = "";
+    ModelState.Clear();
+    List = _greetings.GetList();
+
+
+  }
+
+  public void OnPostClear(string name)
+  {
+    if (Handler == "clear")
+    {
+      _greetings.Clear();
+      List = _greetings.GetList();
+
 
     }
-    return Page();
+
   }
+
 
 }
 

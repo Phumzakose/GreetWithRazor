@@ -12,6 +12,7 @@ public class Greet
 
   public string Greetings(string language, string firstName)
   {
+
     if (firstName != null && language != null)
     {
       if (language == "setswana")
@@ -28,7 +29,7 @@ public class Greet
       }
       else
       {
-        return language + " is not recognised";
+        return "Please select a language, " + firstName;
       }
     }
     else if (language == "")
@@ -113,6 +114,10 @@ public class Greet
     Console.WriteLine(">To remove someone in the list enter clear and the name");
     Console.WriteLine(">To delete all the people you have greeted enter clear");
     Console.WriteLine(">To exit the application enter exit");
+  }
+  public string Message()
+  {
+    return "Your list is cleared";
   }
 
 }

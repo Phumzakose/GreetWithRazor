@@ -6101,11 +6101,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/codex/c#projects/Greet/GreetFunction.Test/GreetFunction.Test.csproj",
+      "projectUniqueName": "/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/GreetFunction.Test.csproj",
       "projectName": "GreetFunction.Test",
-      "projectPath": "/home/codex/c#projects/Greet/GreetFunction.Test/GreetFunction.Test.csproj",
+      "projectPath": "/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/GreetFunction.Test.csproj",
       "packagesPath": "/home/codex/.nuget/packages/",
-      "outputPath": "/home/codex/c#projects/Greet/GreetFunction.Test/obj/",
+      "outputPath": "/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/codex/.nuget/NuGet/NuGet.Config"
@@ -6120,8 +6120,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/codex/c#projects/Greet/GreetFunction/GreetFunction.csproj": {
-              "projectPath": "/home/codex/c#projects/Greet/GreetFunction/GreetFunction.csproj"
+            "/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction/GreetFunction.csproj": {
+              "projectPath": "/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction/GreetFunction.csproj"
             }
           }
         }

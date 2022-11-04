@@ -210,3 +210,15 @@
 /home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/obj/Debug/net6.0/GreetFunction.Test.pdb
 /home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/obj/Debug/net6.0/GreetFunction.Test.genruntimeconfig.cache
 /home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/obj/Debug/net6.0/ref/GreetFunction.Test.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/DnsClient.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/MongoDB.Bson.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/MongoDB.Driver.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/MongoDB.Driver.Core.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/MongoDB.Libmongocrypt.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/SharpCompress.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/Snappier.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/ZstdSharp.dll
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/runtimes/linux/native/libmongocrypt.so
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/runtimes/osx/native/libmongocrypt.dylib
+/home/codex/c#projects/GreetingsWithRazor/GreetFunction1/GreetFunction.Test/bin/Debug/net6.0/runtimes/win/native/mongocrypt.dll

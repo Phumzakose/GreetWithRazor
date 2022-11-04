@@ -9,7 +9,9 @@
 
   <ItemGroup>
     <PackageReference Include="dapper" Version="2.0.123" />
+    <PackageReference Include="MongoDB.Driver" Version="2.18.0" />
     <PackageReference Include="Npgsql" Version="6.0.6" />
+    <PackageReference Include="StackExchange.Redis" Version="2.6.70" />
   </ItemGroup>
 
 </Project>

@@ -1,35 +1,35 @@
-
 namespace GreetFunction.Test;
+using GreetFunction.Database;
 public class GreetTest
 {
-  Greet user = new Greet();
+  IGreet user = new GreetWithMongo("mongodb://0.0.0.0:27017");
 
   [Fact]
   public void ItShouldbeAbleToGreetUserWithIsiXhosa()
   {
-    Assert.Equal("Molo, Phumza", user.Greetings("isixhosa", "Phumza"));
+    Assert.Equal("Molo, Phumza", user.Greetings("Phumza", "isixhosa"));
 
   }
   [Fact]
   public void ItShouldbeAbleToGreetUserWithSetswana()
   {
-    Assert.Equal("Dumelang, le kae? Thembi", user.Greetings("setswana", "Thembi"));
+    Assert.Equal("Dumelang, le kae? Thembi", user.Greetings("Thembi", "setswana"));
   }
   [Fact]
   public void ItShouldbeAbleToGreetUserWithIsizulu()
   {
-    Assert.Equal("Sawubona, Lukho", user.Greetings("isizulu", "Lukho"));
+    Assert.Equal("Sawubona, Lukho", user.Greetings("Lukho", "isizulu"));
   }
   [Fact]
   public void ItShouldbeAbleToGreetUserWithEnglishIfNoLanguageIsEntered()
   {
-    Assert.Equal("Please select a language, Zikho", user.Greetings("", "Zikho"));
+    Assert.Equal("Hello, Zikho", user.Greetings("Zikho", ""));
   }
-  // [Fact]
-  // public void ItShouldbeAbleToReturnErrorMesssage()
-  // {
-  //   Assert.Equal("sepedi is not recognised", user.Greetings("Zikho", "sepedi"));
-  // }
+  [Fact]
+  public void ItShouldbeAbleToReturnErrorMesssage()
+  {
+    Assert.Equal("sepedi is not recognised", user.Greetings("Zikho", "sepedi"));
+  }
   [Fact]
   public void ItShouldBeAbleToReturnTheListOfPeopleGreeted()
   {
@@ -81,7 +81,13 @@ public class GreetTest
   [Fact]
   public void ItShouldBeAbleToReturnErrorMessageIfThereAreNoUsersGreeted()
   {
-    Dictionary<string, int> names = new Dictionary<string, int>() { };
+    //Dictionary<string, int> names = new Dictionary<string, int>() { };
+    foreach (var item in user.GetList())
+    {
+      Console.WriteLine(item);
+
+    }
+    user.Clear();
     Assert.Equal(0, user.Counter());
 
   }

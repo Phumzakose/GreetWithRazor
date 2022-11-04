@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using MongoDB.Bson;
+using MongoDB.Driver;
 using GreetFunction;
 using System.Text.RegularExpressions;
 
@@ -7,16 +9,14 @@ namespace GreetWithRazor.Pages;
 
 public class IndexModel : PageModel
 {
-  //IGreet user = new GreetUsingDataBase();
+
   private IGreet _greetings;
-
-
   private readonly ILogger<IndexModel> _logger;
 
-  public IndexModel(ILogger<IndexModel> logger, IGreet GreetUsingDatabase)
+  public IndexModel(ILogger<IndexModel> logger, IGreet GreetWithMongo)
   {
     _logger = logger;
-    _greetings = GreetUsingDatabase;
+    _greetings = GreetWithMongo;
   }
 
 
@@ -71,9 +71,8 @@ public class IndexModel : PageModel
   {
     if (Handler == "greetedPeople")
     {
-      //clear = _greetings.Clear();
-      List = _greetings.GetList();
 
+      List = _greetings.GetList();
 
     }
     return Redirect("/Greeted");

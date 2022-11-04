@@ -1,9 +1,12 @@
 ﻿using Dapper;
 using Npgsql;
+using StackExchange.Redis;
 using GreetFunction;
+using GreetFunction.Database;
 
+//IGreet user = new GreetWithMongo("mongodb://0.0.0.0:27017");
+//IGreet user = new GreetWithRedis();
 IGreet user = new GreetUsingDataBase();
-
 
 Console.WriteLine("Welcome to the greetings App");
 Console.WriteLine("Enter help for the available Commands");

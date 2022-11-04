@@ -116,6 +116,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.18.0, )"
+            },
             "Npgsql": {
               "target": "Package",
               "version": "[6.0.6, )"

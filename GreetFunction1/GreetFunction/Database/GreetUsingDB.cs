@@ -1,6 +1,6 @@
 using Dapper;
 using Npgsql;
-namespace GreetFunction;
+namespace GreetFunction.Database;
 
 
 public class GreetUsingDataBase : IGreet

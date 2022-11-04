@@ -1,10 +1,12 @@
 using GreetFunction;
+using GreetFunction.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddSingleton<IGreet, GreetUsingDataBase>();
+//builder.Services.AddSingleton<IGreet, GreetWithRedis>();
 
 var app = builder.Build();
 

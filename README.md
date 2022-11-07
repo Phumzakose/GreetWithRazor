@@ -6,7 +6,7 @@
 * Once in the server go to the apps folder using the command - cd apps
 * When you inside the apps folder clone the greet repository - git clone git@github.com:Phumzakose/GreetingsWithRazor.git
 * Then change to the GreetingsWithRazor folder using the command- cd GreetingsWithRazor
-# To restore all local dependencies run the commands inside GreetingsWithRazor
+# To restore all local dependencies run the commands inside GreetingsWithRazor folder
 * dotnet restore
 * dotnet build -c Release
 * Change to the folder that will be running using the command - cd Razor

@@ -10,6 +10,6 @@
 * dotnet restore
 * dotnet build -c Release
 * Change to the folder that will be running using the command - cd Razor
-* Then in Razor folder run this command - dotnet bin/Release/net6.0/GreetWithRazor.dll --urls=http://localhost:6007/  
-* Run the Greetings app on the background use the command - nohup dotnet bin/Release/net6.0/GreetWithRazor.dll --urls=http://localhost:6007/ > vps.log 2>&1 &
+* Then in Razor folder run this command - dotnet bin/Release/net6.0/GreetWithRazor.dll --urls=http://localhost:6007/ 
+* To run the Greetings app on the background use the command - nohup dotnet bin/Release/net6.0/GreetWithRazor.dll --urls=http://localhost:6007/ > vps.log 2>&1 &
 * Check if your app is running at http://phumza.projectcodex.net

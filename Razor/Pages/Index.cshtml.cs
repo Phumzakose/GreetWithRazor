@@ -28,11 +28,11 @@ public class IndexModel : PageModel
   public string? Greeting { get; set; }
   public int count
   {
-    get
-    {
-      return _greetings.Counter();
-    }
-    // get; set;
+    // get
+    // {
+    //   return _greetings.Counter();
+    // }
+    get; set;
   }
 
   public Dictionary<string, int> List { get; set; }

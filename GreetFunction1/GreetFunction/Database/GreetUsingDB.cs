@@ -5,13 +5,13 @@ namespace GreetFunction.Database;
 
 public class GreetUsingDataBase : IGreet
 {
-  string connectionString = "Server=tiny.db.elephantsql.com ;Port=5432;Database=znshpmlq;UserId=znshpmlq;Password=EMEIxMo2NpTDcz4rsKbgvUn2hyNqRJWi";
+  //  string connectionString = "Server=tiny.db.elephantsql.com ;Port=5432;Database=znshpmlq;UserId=znshpmlq;Password=EMEIxMo2NpTDcz4rsKbgvUn2hyNqRJWi";
 
-  public void Table()
+  private NpgsqlConnection connection;
+  public GreetUsingDataBase(string connectionString)
   {
-    var connection = new NpgsqlConnection(connectionString);
+    connection = new NpgsqlConnection(connectionString);
     connection.Open();
-
   }
   public string Greetings(string firstName, string language)
   {
@@ -73,8 +73,8 @@ public class GreetUsingDataBase : IGreet
   public void AddUsers(string userName, int counter)
   {
 
-    using var connection = new NpgsqlConnection(connectionString);
-    connection.Open();
+    // using var connection = new NpgsqlConnection(connectionString);
+    // connection.Open();
 
     var parameters = new { UserName = userName };
 
@@ -105,8 +105,8 @@ public class GreetUsingDataBase : IGreet
   }
   public Dictionary<string, int> GetList()
   {
-    using var connection = new NpgsqlConnection(connectionString);
-    connection.Open();
+    // using var connection = new NpgsqlConnection(connectionString);
+    // connection.Open();
     Dictionary<string, int> names = new Dictionary<string, int>();
 
     var list = connection.Query<People>(@"select * from people order by firstname");
@@ -120,8 +120,8 @@ public class GreetUsingDataBase : IGreet
   }
   public string GreetedTimes(string userName)
   {
-    using var connection = new NpgsqlConnection(connectionString);
-    connection.Open();
+    //  using var connection = new NpgsqlConnection(connectionString);
+    // connection.Open();
     Dictionary<string, int> names = new Dictionary<string, int>();
 
     var list = connection.Query<People>(@"select * from people");
@@ -146,8 +146,9 @@ public class GreetUsingDataBase : IGreet
   }
   public int Counter()
   {
-    using var connection = new NpgsqlConnection(connectionString);
-    connection.Open();
+    // using var connection = new NpgsqlConnection(connectionString);
+    // connection.Open();
+
     Dictionary<string, int> names = new Dictionary<string, int>();
 
     var list = connection.Query<People>(@"select * from people");
@@ -166,16 +167,16 @@ public class GreetUsingDataBase : IGreet
   }
   public string Clear()
   {
-    using var connection = new NpgsqlConnection(connectionString);
-    connection.Open();
+    // using var connection = new NpgsqlConnection(connectionString);
+    // connection.Open();
 
     var list = connection.Query<People>(@"delete from people");
     return "Your list is cleared";
   }
   public string Remove(string userName)
   {
-    using var connection = new NpgsqlConnection(connectionString);
-    connection.Open();
+    // using var connection = new NpgsqlConnection(connectionString);
+    // connection.Open();
 
     var parameters = new { UserName = userName };
     var sql = @"DELETE from people where firstname = @UserName";

@@ -19,7 +19,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-         <ProjectReference Include="../GreetFunction/GreetFunction.csproj" />
+         <!-- <ProjectReference Include="../GreetFunction/GreetFunction.csproj" /> -->
+  </ItemGroup>
+
+    <ItemGroup>
+   <ProjectReference Include="../GreetFunction/GreetFunction.csproj" />
+    <Content Include="sql\*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

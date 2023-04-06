@@ -1,0 +1,43 @@
+@model GreetModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+   <h2 class="display-4">Greeted People</h2> 
+  <div class="table">
+    @if (@ViewData["list"] != null)
+    {
+    <table class="table table-success table-striped">
+      <tr>
+        <th>FirstName</th> 
+        <th>Greeted Times</th>
+        <th>Remove Greeted user</th>
+        </tr>
+    @foreach (KeyValuePair<string, int> kv in ViewData["list"] as Dictionary<string, int>)
+    {
+      <tr>
+        <td>@kv.Key </td>
+      
+        <td>@kv.Value</td>
+        <td>
+          <form method="post">
+              <input asp-for="@Model.FirstName" type="hidden" asp-route-name="name" value="@kv.Key" />
+             <button asp-action="remove" asp-route-name="name" class="btn1, btn btn-danger ">Remove</button>
+          </form>
+        </td>
+      </tr>
+    }
+    </table>
+    }
+  </div>
+    
+      <div class="greeted">
+        @ViewData["message"]
+            
+      </div>
+            <form asp-action="clear" method="post">
+            <button asp-action="clear" class="btn1, btn btn-danger btn-lg" type="clear" >Clear All</button>
+            </form>
+  
+</div>

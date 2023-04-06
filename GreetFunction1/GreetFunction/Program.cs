@@ -6,7 +6,7 @@ using GreetFunction.Database;
 
 //IGreet user = new GreetWithMongo("mongodb://0.0.0.0:27017");
 //IGreet user = new GreetWithRedis();
-IGreet user = new GreetUsingDataBase();
+IGreet user = new GreetUsingDataBase("Server=tiny.db.elephantsql.com ;Port=5432;Database=znshpmlq;UserId=znshpmlq;Password=EMEIxMo2NpTDcz4rsKbgvUn2hyNqRJWi");
 
 Console.WriteLine("Welcome to the greetings App");
 Console.WriteLine("Enter help for the available Commands");

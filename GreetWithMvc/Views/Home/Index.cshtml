@@ -1,0 +1,65 @@
+﻿@model GreetModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="element1">
+    <div class="card">
+    @* <img src="https://images.pexels.com/photos/7815537/pexels-photo-7815537.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> *@
+    <h1>WELCOME TO GREETINGS</h1>
+    </div>
+
+
+    @* <img src="~/images/pexels-vie-studio-4439454.jpg"> *@
+    <div class="text-center">
+            <div class="card">
+                <h2 class="display-4">Greetings App</h2>
+            <form method="post" asp-action="Greetings">
+
+                <div class="validation">
+                <span asp-action="Greetings" asp-validation-for="@Model.FirstName" class="text-danger"></span>
+                </div>
+
+                <label >Name:</label>
+                <input asp-for="@Model.FirstName"  placeholder="First name" aria-label="First name" /><br>
+            
+            <div class="radio">
+                <div class="form-check form-check-inline">
+                    <div class="validation">
+                    <span asp-action="Greetings" asp-validation-for="@Model.Language" class="text-danger"></span>
+                    </div>
+                <input asp-for="@Model.Language"  class="form-check-input" type="radio" id="flexchecked" value="isixhosa">
+                <label class="form-check-label" for="inlineRadio2">IsiXhosa</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input asp-for="@Model.Language"  class="form-check-input"  type="radio"  id="Language" value="setswana">
+                <label class="form-check-label" for="inlineRadio2">Setswana</label>
+                </div>
+                <div class="form-check form-check-inline">
+                <input asp-for="@Model.Language" class="form-check-input"  type="radio"  id="Language" value="isizulu">
+                <label class="form-check-label" for="inlineRadio3">IsiZulu</label>
+                </div>
+            </div> 
+            <div class="counter">
+                counter: @ViewData["count"] 
+            </div>
+                    <div class="button">
+                    <button asp-action="Greetings" class="btn btn-primary btn-lg" type="submit" >Greet</button>
+                    <button asp-action="List" class="btn btn-primary btn-lg" type="submit" >Greeted</button>
+                    </div>
+
+            </form>
+            <div class="greeting" background >
+                @ViewData["Greeting"]
+            </div>
+
+            </div>
+
+    </div>
+
+
+    </div>
+
+</div>
+
+

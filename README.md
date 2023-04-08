@@ -1,3 +1,5 @@
+[![.NET](https://github.com/Phumzakose/GreetingsWithRazor/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Phumzakose/GreetingsWithRazor/actions/workflows/dotnet.yml)
+
 # GreetingsWithRazor Deployment 
 * Create a droplet on digital oceans
 * After creating a droplet connect to the server

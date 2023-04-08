@@ -20,6 +20,7 @@ public class HomeController : Controller
   public IActionResult Index()
   {
     ViewData["count"] = _greetings.Counter();
+
     return View();
   }
 
@@ -29,9 +30,13 @@ public class HomeController : Controller
   {
     if (ModelState.IsValid)
     {
-      _greetings.AddUsers(friends.FirstName!, 1);
-      ViewData["Greeting"] = _greetings.Greetings(friends.FirstName!, friends.Language!);
+      _greetings.AddUsers(friends.FirstName!.ToUpper(), 1);
+      ViewData["Greeting"] = _greetings.Greetings(friends.FirstName!.ToUpper(), friends.Language!);
       ViewData["list"] = _greetings.GetList();
+      ViewData["count"] = _greetings.Counter();
+      friends.FirstName = "";
+      friends.Language = "";
+      ModelState.Clear();
 
 
 

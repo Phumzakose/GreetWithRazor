@@ -39,7 +39,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: create postgresql tables
-      run: PGPASSWORD=counter123 psql -h localhost -U counter -d counter_app -a -f ./GreetFunction1/GreetFunction/sql
+      run: PGPASSWORD=counter123 psql -h localhost -U counter -d counter_app -a -f ./GreetFunction1/GreetFunction/sql/table.sql
     - name: Test
       run: dotnet test --no-build --verbosity normal
       env:

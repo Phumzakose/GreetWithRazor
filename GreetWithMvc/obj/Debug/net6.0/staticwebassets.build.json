@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tlNc7RyKMUduNXkM9U/qLGp44wlDbz1Qgs9H8IcIw0E=",
+  "Hash": "hcEaIPM+OgKmZYyVgVLcIahf5WYvsXpaV2CJaLb9I7c=",
   "Source": "GreetWithMvc",
   "BasePath": "_content/GreetWithMvc",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot/favicon.ico"
     },
     {
-      "Identity": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/images/pexels-amina-filkins-5413728.jpg",
+      "Identity": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/images/pexels-三-点sky-2344013.jpg",
       "SourceId": "GreetWithMvc",
       "SourceType": "Discovered",
       "ContentRoot": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/",
       "BasePath": "_content/GreetWithMvc",
-      "RelativePath": "images/pexels-amina-filkins-5413728.jpg",
+      "RelativePath": "images/pexels-三-点sky-2344013.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,41 +99,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/pexels-amina-filkins-5413728.jpg"
-    },
-    {
-      "Identity": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/images/pexels-ekaterina-bolovtsova-6077647.jpg",
-      "SourceId": "GreetWithMvc",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/",
-      "BasePath": "_content/GreetWithMvc",
-      "RelativePath": "images/pexels-ekaterina-bolovtsova-6077647.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/pexels-ekaterina-bolovtsova-6077647.jpg"
-    },
-    {
-      "Identity": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/images/pexels-vie-studio-4439454.jpg",
-      "SourceId": "GreetWithMvc",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/",
-      "BasePath": "_content/GreetWithMvc",
-      "RelativePath": "images/pexels-vie-studio-4439454.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/pexels-vie-studio-4439454.jpg"
+      "OriginalItemSpec": "wwwroot/images/pexels-三-点sky-2344013.jpg"
     },
     {
       "Identity": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/wwwroot/js/site.js",

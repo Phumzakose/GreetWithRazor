@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Instructions of the App";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="instructions">
+<p>
+    <ul>
+        <li>To greet people enter the name of the person and select a language</li>
+        <li>Click greet to see the message at the bottom</li>
+        <li>To see greeted people click the greeted button</li>
+        <li>To remove someone in the list click the remove button next to the person</li>
+        <li>To delete all the people you have greeted click the clear All button</li>
+        <li>Click the continue button to go to the greetings page</li>
+    </ul>
+</p>
+<form class="cont" method="post">
+<button asp-action="Index" type="submit" class="btn btn-primary">Continue</button>
+</form>
+
+</div>

@@ -17,7 +17,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-image: url("https://images.pexels.com/photos/2344013/pexels-photo-2344013.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-image: url("/images/pexels-三-点sky-2344013.jpg");
   /* background-repeat: no-repeat; */
   background-position: center;
   background-size: cover;
@@ -42,11 +42,14 @@ label {
   font-weight: bold;
   margin-bottom: 10px;
 }
+.navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
 .nav-item {
   padding: 6px, 20px;
-  /* text-decoration: none; */
-  color: red;
-  margin-left: 100px;
+  margin-left: 80px;
   font-size: 24px;
   font-weight: bold;
 }
@@ -129,7 +132,7 @@ input[type="text"] {
   margin-bottom: 20px;
   margin-left: 900;
 }
-h1 {
+.header h1 {
   margin-top: 300px;
   margin-bottom: 80px;
   text-align: center;
@@ -147,17 +150,23 @@ h2 {
 .instructions {
   font-size: 20px;
   text-align: justify;
+  margin-top: 30px;
   margin-bottom: 70px;
 }
 .fa {
   margin-left: 300px;
   width: 100px;
 }
-.go {
+.cont {
   margin-top: 70px;
+}
+.cont button {
+  padding: 10px 20px;
+  border-radius: 12px;
 }
 .validation {
   margin-bottom: 20px;
+  font-size: 24px;
 }
 .button button {
   margin-right: 50px;
@@ -175,8 +184,10 @@ h2 {
 .element {
   display: flex;
   gap: 150px;
+  height: 100vh;
 }
 .content {
+  height: 70vh;
   box-sizing: border-box;
   background: linear-gradient(
     to top,
@@ -186,6 +197,10 @@ h2 {
   border-radius: 18px;
   margin-top: 30px;
   padding: 5px 30px;
+}
+
+.fa {
+  width: 70px;
 }
 @media (max-width: 600px) {
   .element {
@@ -203,9 +218,4 @@ h2 {
   .radio {
     margin-left: 50px;
   }
-}
-.navbar-brand {
-  font-size: 30px;
-  font-weight: bold;
-  color: pink;
 }

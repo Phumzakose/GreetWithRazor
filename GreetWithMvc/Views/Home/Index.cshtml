@@ -6,11 +6,8 @@
 <div class="element">
     <div class="header">
         <h1>WELCOME<br> TO GREETINGS</h1>
-        <i class="fa fa-handshake-o w3-xxlarge" aria-hidden="true"></i>
+        
     </div>
-   
-
-    @* <img src="~/images/pexels-vie-studio-4439454.jpg"> *@
     <div class="content">
                 <h2 class="display-4">GREET YOUR FRIEND</h2>
             <form method="post" asp-action="Greetings">
@@ -19,7 +16,7 @@
                     </div>
 
                     <label >Name:</label>
-                    <input asp-for="@Model.FirstName"  placeholder="First name" aria-label="First name" /><br>
+                    <input asp-for="@Model.FirstName"  placeholder="Firstname" aria-label="First name" /><br>
                 
                 <div class="radio">
                     <div class="form-check form-check-inline">

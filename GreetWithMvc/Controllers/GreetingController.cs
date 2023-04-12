@@ -30,8 +30,8 @@ public class HomeController : Controller
   {
     if (ModelState.IsValid)
     {
-      _greetings.AddUsers(friends.FirstName!.ToUpper(), 1);
-      ViewData["Greeting"] = _greetings.Greetings(friends.FirstName!.ToUpper(), friends.Language!);
+      _greetings.AddUsers(friends.FirstName!, 1);
+      ViewData["Greeting"] = _greetings.Greetings(friends.FirstName!, friends.Language!);
       ViewData["list"] = _greetings.GetList();
       ViewData["count"] = _greetings.Counter();
       friends.FirstName = "";
@@ -68,9 +68,9 @@ public class HomeController : Controller
     return View("List");
   }
 
-  public IActionResult Privacy()
+  public IActionResult Guide()
   {
-    return View();
+    return View("Guide");
   }
 
   [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

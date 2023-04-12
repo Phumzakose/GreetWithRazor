@@ -15,16 +15,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/codex/c#projects/GreetingsWithRazor/GreetWithMvc
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/codex/c\#projects/GreetingsWithRazor/GreetWithMvc/Views/Home/Guide.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9HdWlkZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/codex/c\#projects/GreetingsWithRazor/GreetWithMvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/codex/c\#projects/GreetingsWithRazor/GreetWithMvc/Views/Home/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9MaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/codex/c\#projects/GreetingsWithRazor/GreetWithMvc/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/codex/c\#projects/GreetingsWithRazor/GreetWithMvc/Views/Shared/Error.cshtml]

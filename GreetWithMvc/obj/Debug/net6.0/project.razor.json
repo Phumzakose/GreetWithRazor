@@ -18374,13 +18374,13 @@
   "RootNamespace": "GreetWithMvc",
   "Documents": [
     {
-      "FilePath": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/Views/Home/Guide.cshtml",
+      "TargetPath": "Views\\Home\\Guide.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "/home/codex/c#projects/GreetingsWithRazor/GreetWithMvc/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {

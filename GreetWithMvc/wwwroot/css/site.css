@@ -184,7 +184,6 @@ h2 {
 .element {
   display: flex;
   gap: 150px;
-  height: 100vh;
 }
 .content {
   height: 70vh;
